@@ -13,6 +13,7 @@ import lombok.Data;
 @Entity
 @Table(name = "currencies")
 public class Currency {
+
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;

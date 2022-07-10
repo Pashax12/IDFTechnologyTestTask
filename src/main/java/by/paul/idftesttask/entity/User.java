@@ -19,7 +19,7 @@ public class User {
   @Column(name = "username")
   private String username;
   @Column(name = "currency_code")
-  private int currencyCode;
+  private Long currencyCode;
   @Column(name = "price_usd")
   private Double priceUsd;
 
