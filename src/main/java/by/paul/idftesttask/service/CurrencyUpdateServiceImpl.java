@@ -28,8 +28,8 @@ public class CurrencyUpdateServiceImpl implements CurrencyUpdateService {
   public void updateCurrenciesFromApi() {
     Arrays.stream(Objects
         .requireNonNull(currencyResponse.bodyToMono(CurrencyCoinLoreDTO[].class)
-        .block()))
-    .map(currencyCoinLoreDTO -> objectMapper.convertValue(currencyCoinLoreDTO, Currency.class))
-    .forEach(currencyRepository::save);
+            .block()))
+        .map(currencyCoinLoreDTO -> objectMapper.convertValue(currencyCoinLoreDTO, Currency.class))
+        .forEach(currencyRepository::save);
   }
 }
