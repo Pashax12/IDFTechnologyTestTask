@@ -1,7 +1,5 @@
 package by.paul.idftesttask.configuration;
 
-import java.nio.charset.StandardCharsets;
-import java.time.ZonedDateTime;
 import java.util.Collections;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -36,7 +34,7 @@ public class UpdateClientConfiguration {
   @Autowired
   public ResponseSpec getInitializedRequest(WebClient webClient) {
     return webClient.get()
-        .uri(baseUrl+nextUrl)
+        .uri(baseUrl + nextUrl)
         .retrieve();
   }
 }
