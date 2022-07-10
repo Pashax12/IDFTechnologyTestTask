@@ -1,0 +1,29 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/CryptoCurrencyApi
+    username: ${ENV_USERNAME:postgres}
+    password: ${ENV_PASSWORD:root}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: false
+    open-in-view: true
+  main:
+    allow-circular-references: true
+server:
+  error:
+    include-message: always
+    include-exception: true
+    whitelabel:
+      enabled: true
+    include-stacktrace: always
+    include-binding-errors: always
+data:
+  updateReq:
+    baseUrl: https://api.coinlore.net/api/
+    nextUrl: ticker/?id=90,80,48543
+exception:
+  text:
+    noSuchCurrency: Entered currency cant be choosen
