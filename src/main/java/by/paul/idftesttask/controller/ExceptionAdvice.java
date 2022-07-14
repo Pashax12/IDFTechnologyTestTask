@@ -11,6 +11,6 @@ public class ExceptionAdvice {
 
   @ExceptionHandler(NoSuchCurrencyException.class)
   public ResponseEntity<String> handleAuthenticationException(NoSuchCurrencyException e) {
-    return new ResponseEntity<>(e.getMessage(), HttpStatus.NOT_FOUND);
+    return new ResponseEntity<>(e.getMessage(), HttpStatus.BAD_REQUEST);
   }
 }
